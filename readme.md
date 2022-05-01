@@ -13,4 +13,3 @@ This repo contains a small "Hello World" webserver which simulates a small micro
  - Create a K8S resource for scale up and down the microservice based on the CPU load
  - Create a Jenkins pipeline for deploying the microservice.
  - Expose the APIs for monitoring the K8s cluster.
-
