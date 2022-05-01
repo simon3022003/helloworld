@@ -1,16 +1,17 @@
 package main
 
 import (
-	"technical_challenge/handlers"
-	"os"
-	"os/signal"
+	"HELLOWORD/handlers"
+	"context"
 	"fmt"
 	"net/http"
+	"os"
+	"os/signal"
+	"time"
+
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-	"time"
-	"context"
 )
 
 const (
@@ -26,6 +27,9 @@ func routes() (r *chi.Mux) {
 		r.Get("/health", handlers.Health)
 		r.Get("/metrics", promhttp.Handler().ServeHTTP)
 		r.Get("/load", handlers.Load)
+		r.Get("/apis/v1/deployments", handlers.Deployments)
+		r.Get("/apis/v1/deployment/{deploy:[0-9a-zA-Z-]+}", handlers.Pods)
+		r.Get("/apis/v1/pods*", handlers.Podstatus)
 		r.Get("/", handlers.Hello)
 	})
 	return r

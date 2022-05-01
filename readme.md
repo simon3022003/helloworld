@@ -1,6 +1,6 @@
 
 
-# Technical Devops Challenge
+# Introduction
 
 This repo contains a small "Hello World" webserver which simulates a small microservice
 
@@ -16,4 +16,4 @@ This repo contains a small "Hello World" webserver which simulates a small micro
  - Create a K8S resource for scale up and down the microservice based on the CPU load
  - Create a Jenkins pipeline for deploying the microservice.
  - Describe how to retrieve metrics from the microservice like CPU usage, memory usage...
- - Describe how to retrieve the logs from the microservice and how to store in a central location
+ - Describe how to retrieve the logs from the microservice and how to store in a central location test
